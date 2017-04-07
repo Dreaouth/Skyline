@@ -21,17 +21,13 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
-            <android.support.v7.widget.CardView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="4dp">
-                <LinearLayout
+            <LinearLayout
+                android:id="@+id/air_button"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:drawable="@drawable/circle"
+                android:clickable="true">
                 <TextView
                     android:id="@+id/air_text"
                     android:layout_width="wrap_content"
@@ -45,101 +41,85 @@
                     android:layout_gravity="center"
                     android:text="空气状况"
                     android:textColor="#fff"/>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
     </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <LinearLayout
+                android:id="@+id/comf_button"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/comf_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="40sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="舒适状况"
-                        android:textColor="#fff"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:drawable="@drawable/circle"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/comf_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="舒适状况"
+                    android:textColor="#fff"/>
+            </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <LinearLayout
+                android:id="@+id/wash_button"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/wash_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="40sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="洗车指数"
-                        android:textColor="#fff"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:drawable="@drawable/circle"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/wash_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="洗车指数"
+                    android:textColor="#fff"/>
+            </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <LinearLayout
+                android:id="@+id/drsg_button"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/drsg_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="40sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="穿衣指数"
-                        android:textColor="#fff"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:drawable="@drawable/circle"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/drsg_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="穿衣指数"
+                    android:textColor="#fff"/>
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
@@ -150,125 +130,105 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <LinearLayout
+                android:id="@+id/flu_button"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/flu_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="40sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="感冒指数"
-                        android:textColor="#fff"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:drawable="@drawable/circle"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/flu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="感冒指数"
+                    android:textColor="#fff"/>
+            </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <LinearLayout
+                android:id="@+id/sport_button"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/sport_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="40sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="运动指数"
-                        android:textColor="#fff"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:drawable="@drawable/circle"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/sport_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="运动指数"
+                    android:textColor="#fff"/>
+            </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <LinearLayout
+                android:id="@+id/travel_button"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/travel_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="40sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="旅行指数"
-                        android:textColor="#fff"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:drawable="@drawable/circle"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/travel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="旅行指数"
+                    android:textColor="#fff"/>
+            </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <LinearLayout
+                android:id="@+id/uv_button"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/uv_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="40sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="紫外线指数"
-                        android:textColor="#fff"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:drawable="@drawable/circle"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/uv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="紫外线指数"
+                    android:textColor="#fff"/>
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
