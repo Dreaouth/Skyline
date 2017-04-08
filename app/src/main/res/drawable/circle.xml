@@ -4,13 +4,11 @@
     <!-- 填充的颜色：这里设置背景透明 -->
         <solid android:color="@android:color/transparent" />
         <!-- 边框的颜色 ：不能和窗口背景色一样-->
-        <stroke>
-            android:width="0.8dp"
-            android:color="#DF8C02" />
+        <stroke android:color="#000"
+                android:width="0.8dp"/>
         <!-- 设置按钮的四个角为弧形 -->
         <!-- android:radius 弧形的半径 -->
         <corners android:radius="5dip" />
-        </stroke>
 
         <!-- padding：Button里面的文字与Button边界的间隔 -->
         <padding>

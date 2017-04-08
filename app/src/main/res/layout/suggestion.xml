@@ -34,11 +34,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="10dp"
                     android:text="空气状况"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -60,11 +61,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="10dp"
                     android:text="舒适状况"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -86,11 +88,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="10dp"
                     android:text="洗车指数"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -112,11 +115,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="10dp"
                     android:text="穿衣指数"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -143,11 +147,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="10dp"
                     android:text="感冒指数"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -169,11 +174,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="10dp"
                     android:text="运动指数"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -195,11 +201,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="10dp"
                     android:text="旅行指数"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -213,7 +220,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/uv_text"
@@ -221,12 +228,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
-                    android:textSize="40sp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="紫外线指数"
+                    android:paddingTop="10dp"
                     android:textColor="#fff"/>
             </LinearLayout>
         </RelativeLayout>
