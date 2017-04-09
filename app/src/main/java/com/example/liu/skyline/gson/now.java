@@ -7,8 +7,8 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Now {
-    @SerializedName("f1")
-    public String f1;      //体感温度
+    @SerializedName("fl")
+    public String fl;      //体感温度
     @SerializedName("hum")
     public String hum;     //湿度
     @SerializedName("pcpn")

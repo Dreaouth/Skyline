@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".WeatherActivity" />
-        <activity android:name=".nowActivity"></activity>
+        <activity android:name=".nowActivity" />
+        <activity android:name=".SuggestionActivity"></activity>
     </application>
 
 </manifest>

@@ -6,23 +6,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:orientation="vertical"
-        android:background="#8000">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/degree_text_now"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|right"
+            android:gravity="end"
             android:layout_margin="15dp"
             android:textColor="#fff"
-            android:textSize="60dp"/>
+            android:textSize="50dp"/>
         <TextView
             android:id="@+id/weather_info_text_now"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:layout_gravity="right"
-            android:textSize="40dp"
+            android:layout_gravity="end|right"
+            android:gravity="end"
+            android:textSize="30dp"
             android:textColor="#fff"/>
     </LinearLayout>
     <LinearLayout
@@ -50,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:textSize="40sp"/>
+                        android:textSize="35sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -74,13 +75,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:textSize="40sp"/>
+                        android:textSize="35sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:text="湿度"/>
+                        android:text="湿度(%)"/>
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
@@ -103,13 +104,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:textSize="40sp"/>
+                        android:textSize="35sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:text="降雨量"/>
+                        android:text="降雨量(mm)"/>
                 </LinearLayout>
             </RelativeLayout>
             <RelativeLayout
@@ -127,13 +128,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:textSize="40sp"/>
+                        android:textSize="35sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:text="气压"/>
+                        android:text="气压(Kpa)"/>
                 </LinearLayout>
             </RelativeLayout>
             <RelativeLayout
@@ -151,13 +152,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:textSize="40sp"/>
+                        android:textSize="35sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="#fff"
-                        android:text="能见度"/>
+                        android:text="能见度(km)"/>
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>

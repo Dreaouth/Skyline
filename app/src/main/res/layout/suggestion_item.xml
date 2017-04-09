@@ -5,8 +5,7 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary">
+        android:layout_height="?attr/actionBarSize">
         <TextView
             android:id="@+id/suggest_title_text"
             android:layout_width="wrap_content"
@@ -34,14 +33,14 @@
             android:id="@+id/status_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50sp"
+            android:textSize="30sp"
             android:textColor="#fff"
             android:layout_margin="15dp"/>
         <TextView
             android:id="@+id/information_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="15sp"
             android:textColor="#fff"
             android:layout_margin="15dp"/>
     </LinearLayout>

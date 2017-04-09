@@ -3,35 +3,36 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
-    android:background="#8000">
+    android:layout_margin="15dp">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:padding="15dp"
         android:text="生活建议"
         android:textColor="#fff"
+        android:background="#8000"
         android:textSize="20sp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp">
+        android:layout_marginTop="5dp">
         <RelativeLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
             <LinearLayout
                 android:id="@+id/air_button"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:padding="10dp"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/air_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
                     android:layout_gravity="center"
                     android:textColor="#fff"
                     android:textSize="25sp"/>
@@ -39,9 +40,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="10sp"
                     android:text="空气状况"
-                    android:textColor="#fff"/>
+                    android:textColor="#fff"
+                    android:id="@+id/textView" />
             </LinearLayout>
     </RelativeLayout>
         <RelativeLayout
@@ -53,20 +56,23 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:padding="10dp"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/comf_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="15dp"
                     android:textColor="#fff"
                     android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="10sp"
                     android:text="舒适状况"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -80,12 +86,14 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:padding="10dp"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/wash_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
                     android:layout_gravity="center"
                     android:textColor="#fff"
                     android:textSize="25sp"/>
@@ -93,11 +101,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="10sp"
                     android:text="洗车指数"
                     android:textColor="#fff"/>
             </LinearLayout>
         </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -107,12 +122,14 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:padding="10dp"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/drsg_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
                     android:layout_gravity="center"
                     android:textColor="#fff"
                     android:textSize="25sp"/>
@@ -120,16 +137,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="10sp"
                     android:text="穿衣指数"
                     android:textColor="#fff"/>
             </LinearLayout>
         </RelativeLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -139,20 +152,23 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:padding="10dp"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/flu_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="15dp"
                     android:textColor="#fff"
                     android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="10sp"
                     android:text="感冒指数"
                     android:textColor="#fff"/>
             </LinearLayout>
@@ -166,12 +182,14 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:padding="10dp"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/sport_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
                     android:layout_gravity="center"
                     android:textColor="#fff"
                     android:textSize="25sp"/>
@@ -179,47 +197,55 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="10sp"
                     android:text="运动指数"
                     android:textColor="#fff"/>
             </LinearLayout>
         </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
             <LinearLayout
                 android:id="@+id/travel_button"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawable="@drawable/circle"
+                android:padding="10dp"
+                android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
                     android:id="@+id/travel_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="15dp"
                     android:textColor="#fff"
-                    android:textSize="25sp"/>
+                    android:textSize="25dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="10dp"
                     android:text="旅行指数"
                     android:textColor="#fff"/>
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
             <LinearLayout
                 android:id="@+id/uv_button"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:background="@drawable/circle"
                 android:clickable="true">
                 <TextView
@@ -227,14 +253,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="15dp"
                     android:textColor="#fff"
-                    android:textSize="25sp"/>
+                    android:textSize="25dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="紫外线指数"
-                    android:paddingTop="10dp"
+                    android:textSize="10dp"
+                    android:text="紫外线"
+                    android:paddingTop="15dp"
                     android:textColor="#fff"/>
             </LinearLayout>
         </RelativeLayout>
