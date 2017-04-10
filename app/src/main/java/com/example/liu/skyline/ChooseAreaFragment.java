@@ -119,6 +119,25 @@ public class ChooseAreaFragment extends Fragment {
         queryProvince();
     }
     /**
+     * 改进方法查询，通过搜索框的方式直接搜索城市
+     */
+    private void SearchCity(String cityName){
+        String weatherUrl="https://api.heweather.com/v5/search?city="+cityName+
+                "&key=cfe268e31b524d0bbe763e88295d38da";
+        HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+
+    }
+    /**
      * 查询全国所有的省，优先从数据库查询，如果没有查询再到服务器上查询
      */
     private void queryProvince(){
