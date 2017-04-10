@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.liu.skyline.db.City;
 import com.example.liu.skyline.db.County;
 import com.example.liu.skyline.db.Province;
+import com.example.liu.skyline.gson.Weather;
 import com.example.liu.skyline.util.HttpUtil;
 import com.example.liu.skyline.util.Utility;
 
@@ -121,21 +122,35 @@ public class ChooseAreaFragment extends Fragment {
     /**
      * 改进方法查询，通过搜索框的方式直接搜索城市
      */
-    private void SearchCity(String cityName){
+    public void SearchCity(final String cityName){
         String weatherUrl="https://api.heweather.com/v5/search?city="+cityName+
                 "&key=cfe268e31b524d0bbe763e88295d38da";
         HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                
+                e.printStackTrace();
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(getContext(),"查询失败",Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
+                final String responseText=response.body().string();
+                final Weather weather=Utility.handleWeatherResponse(responseText);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (weather!=null && "ok".equals(weather.status)){
 
+                        }
+                    }
+                });
             }
         });
-
     }
     /**
      * 查询全国所有的省，优先从数据库查询，如果没有查询再到服务器上查询

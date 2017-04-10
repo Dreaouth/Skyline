@@ -32,7 +32,7 @@
         android:layout_height="20dp"
         android:background="@drawable/information_circle"
         android:layout_gravity="bottom|right"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:text="天气详情"
         android:textSize="12dp" />
 

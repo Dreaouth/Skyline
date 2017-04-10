@@ -17,6 +17,6 @@
             android:layout_marginLeft="10dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/ic_back"
+            android:background="@drawable/white_back"
             />
 </RelativeLayout>
