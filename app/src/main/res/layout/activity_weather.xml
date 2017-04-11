@@ -11,8 +11,8 @@
         android:scaleType="centerCrop"/>
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh"
@@ -38,7 +38,7 @@
     </ScrollView>
     </android.support.v4.widget.SwipeRefreshLayout>
         <fragment
-            android:id="@+id/choose_my_cityfragment"
+            android:id="@+id/choose_my_city"
             android:name="com.example.liu.skyline.MyCityFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

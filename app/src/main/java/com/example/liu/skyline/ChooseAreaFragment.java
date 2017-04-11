@@ -76,7 +76,7 @@ public class ChooseAreaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.choose_area,container,false);
         titleText=(TextView)view.findViewById(R.id.title_text);
-        backButton=(Button)view.findViewById(R.id.back_button);
+        backButton=(Button)view.findViewById(R.id.back_button1);
         listView=(ListView)view.findViewById(R.id.list_view);
         adapter=new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,dataList);
         listView.setAdapter(adapter);
@@ -99,10 +99,19 @@ public class ChooseAreaFragment extends Fragment {
                 }
                 else if (currentLevel==LEVEL_COUNTY){
                     String WeatherId=countyList.get(position).getWeatherId();
-                    Intent intent=new Intent(getActivity(),WeatherActivity.class);
-                    intent.putExtra("weather_id",WeatherId);
-                    startActivity(intent);
-                    getActivity().finish();
+                    if (getActivity() instanceof MainActivity){
+                        Intent intent=new Intent(getActivity(),WeatherActivity.class);
+                        intent.putExtra("weather_id",WeatherId);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }
+                    else if (getActivity() instanceof WeatherActivity){
+                        WeatherActivity activity=(WeatherActivity)getActivity();
+                        activity.drawerLayout.closeDrawers();
+                        activity.swipeRefresh.setRefreshing(true);
+                        activity.requestWeather(WeatherId);
+                    }
+
                 }
             }
         });
