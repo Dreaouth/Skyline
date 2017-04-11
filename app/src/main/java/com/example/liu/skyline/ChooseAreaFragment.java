@@ -100,6 +100,8 @@ public class ChooseAreaFragment extends Fragment {
                 else if (currentLevel==LEVEL_COUNTY){
                     String WeatherId=countyList.get(position).getWeatherId();
                     if (getActivity() instanceof MainActivity){
+                        MyCity myCity=new MyCity(countyList.get(position).getCountyName(),R.id.city_delete,WeatherId);
+                        MyCityFragment.cityList.add(myCity);
                         Intent intent=new Intent(getActivity(),WeatherActivity.class);
                         intent.putExtra("weather_id",WeatherId);
                         startActivity(intent);

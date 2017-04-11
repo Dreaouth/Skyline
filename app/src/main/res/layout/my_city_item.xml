@@ -8,14 +8,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:textSize="30dp"
         android:gravity="left"
         android:layout_weight="1"/>
     <Button
         android:id="@+id/city_delete"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/red_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/red_delete1"
         android:layout_marginRight="15dp"
+        android:layout_gravity="center_vertical"
         android:focusable="false"
         android:visibility="invisible"/>
 

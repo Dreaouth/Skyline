@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +16,6 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.liu.skyline.db.Province;
-import com.example.liu.skyline.gson.Weather;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +25,7 @@ import java.util.List;
  */
 
 public class MyCityFragment extends Fragment {
-    private List<MyCity> cityList=new ArrayList<MyCity>();
+    public static List<MyCity> cityList=new ArrayList<>();
     private ListView listView;
     @Nullable
     @Override
@@ -43,8 +40,6 @@ public class MyCityFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        MyCity aaaa=new MyCity("sssss",R.id.city_delete);
-        cityList.add(aaaa);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -52,8 +47,10 @@ public class MyCityFragment extends Fragment {
                 if (button.getVisibility()==View.VISIBLE){
                     button.setVisibility(View.INVISIBLE);
                 }
-                Intent intent=new Intent(getActivity(), WeatherActivity.class);
-                getActivity().startActivity(intent);
+                WeatherActivity activity=(WeatherActivity)getActivity();
+                activity.drawerLayout.closeDrawers();
+                activity.swipeRefresh.setRefreshing(true);
+                activity.requestWeather(cityList.get(position).getCountyId());
             }
         });
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -107,6 +104,7 @@ public class MyCityFragment extends Fragment {
                     notifyDataSetChanged();
                 }
             });
+            holder.delete.setVisibility(View.INVISIBLE);
             return convertView;
         }
 

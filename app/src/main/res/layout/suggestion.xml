@@ -209,8 +209,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
         <RelativeLayout
-            android:layout_width="110dp"
-            android:layout_height="match_parent">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
             <LinearLayout
                 android:id="@+id/travel_button"
                 android:orientation="vertical"
@@ -238,8 +239,9 @@
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="110dp"
-            android:layout_height="match_parent">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
             <LinearLayout
                 android:id="@+id/uv_button"
                 android:orientation="vertical"
@@ -265,6 +267,11 @@
                     android:paddingTop="15dp"
                     android:textColor="#fff"/>
             </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

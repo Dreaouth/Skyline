@@ -7,9 +7,11 @@ package com.example.liu.skyline;
 public class MyCity {
     private String cityName;
     private int buttonId;
-    public MyCity(String cityName,int buttonId){
+    private String countyId;
+    public MyCity(String cityName,int buttonId,String countyId){
         this.cityName=cityName;
         this.buttonId=buttonId;
+        this.countyId=countyId;
     }
 
     public String getCityName() {
@@ -20,4 +22,7 @@ public class MyCity {
         return buttonId;
     }
 
+    public String getCountyId() {
+        return countyId;
+    }
 }
