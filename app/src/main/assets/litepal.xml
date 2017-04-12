@@ -1,9 +1,10 @@
 <litepal>
     <dbname value="skyline"/>
-    <version value="1"/>
+    <version value="2"/>
     <list>
         <mapping class="com.example.liu.skyline.db.Province"/>
         <mapping class="com.example.liu.skyline.db.City"/>
         <mapping class="com.example.liu.skyline.db.County"/>
+        <mapping class="com.example.liu.skyline.MyCity"/>
     </list>
 </litepal>

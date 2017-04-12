@@ -27,12 +27,14 @@ import java.util.List;
 public class MyCityFragment extends Fragment {
     public static List<MyCity> cityList=new ArrayList<>();
     private ListView listView;
+    private Button button;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.my_city,container,false);
         MyCityAdapter adapter=new MyCityAdapter(this.getActivity(),cityList);
         listView=(ListView)view.findViewById(R.id.listView_MyCity);
+        button=(Button)view.findViewById(R.id.insert_city);
         listView.setAdapter(adapter);
         return view;
     }
@@ -67,6 +69,16 @@ public class MyCityFragment extends Fragment {
                 //关于返回值，若返回False，则是当长按时，既调用onItemLongClick，同时调用onItemLongClick后
                 //还会调用onItemClick，就是说会同时调用onItemLongClick，和onItemClick，
                 //若返回true，则只调用onItemLongClick
+            }
+        });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),insert_city.class);
+                startActivity(intent);
+                button.setVisibility(View.INVISIBLE);
+                WeatherActivity activity=(WeatherActivity)getActivity();
+                activity.drawerLayout.closeDrawers();
             }
         });
     }

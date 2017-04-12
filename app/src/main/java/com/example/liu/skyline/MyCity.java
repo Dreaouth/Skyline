@@ -1,10 +1,12 @@
 package com.example.liu.skyline;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by liu on 2017/4/10.
  */
 
-public class MyCity {
+public class MyCity extends DataSupport{
     private String cityName;
     private int buttonId;
     private String countyId;

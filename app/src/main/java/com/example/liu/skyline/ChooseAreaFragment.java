@@ -46,6 +46,7 @@ public class ChooseAreaFragment extends Fragment {
     private ListView listView;
     private ArrayAdapter<String> adapter;
     private List<String> dataList=new ArrayList<>();
+    private ListView mycity_listview;
     /**
      * 省列表
      */
@@ -78,6 +79,7 @@ public class ChooseAreaFragment extends Fragment {
         titleText=(TextView)view.findViewById(R.id.title_text);
         backButton=(Button)view.findViewById(R.id.back_button1);
         listView=(ListView)view.findViewById(R.id.list_view);
+        mycity_listview=(ListView)view.findViewById(R.id.listView_MyCity);
         adapter=new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,dataList);
         listView.setAdapter(adapter);
         return view;
@@ -101,17 +103,26 @@ public class ChooseAreaFragment extends Fragment {
                     String WeatherId=countyList.get(position).getWeatherId();
                     if (getActivity() instanceof MainActivity){
                         MyCity myCity=new MyCity(countyList.get(position).getCountyName(),R.id.city_delete,WeatherId);
+                        myCity.save();
                         MyCityFragment.cityList.add(myCity);
                         Intent intent=new Intent(getActivity(),WeatherActivity.class);
                         intent.putExtra("weather_id",WeatherId);
                         startActivity(intent);
                         getActivity().finish();
                     }
-                    else if (getActivity() instanceof WeatherActivity){
-                        WeatherActivity activity=(WeatherActivity)getActivity();
-                        activity.drawerLayout.closeDrawers();
-                        activity.swipeRefresh.setRefreshing(true);
-                        activity.requestWeather(WeatherId);
+                    else {
+//                        WeatherActivity activity=(WeatherActivity)getActivity();
+                        MyCity myCity=new MyCity(countyList.get(position).getCountyName(),R.id.city_delete,WeatherId);
+                        myCity.save();
+                        Toast.makeText(getContext(),countyList.get(position).getCountyName(),Toast.LENGTH_SHORT).show();
+                        MyCityFragment.cityList.add(myCity);
+//                        MyCityFragment.MyCityAdapter adapter=(MyCityFragment.MyCityAdapter)mycity_listview.getAdapter();
+//                        adapter.notifyDataSetChanged();
+//                        activity.drawerLayout.closeDrawers();
+//                        activity.swipeRefresh.setRefreshing(true);
+//                        activity.requestWeather(WeatherId);
+//                        Toast.makeText(getContext(),"刷新成功",Toast.LENGTH_SHORT).show();
+//                        activity.finish();
                     }
 
                 }
