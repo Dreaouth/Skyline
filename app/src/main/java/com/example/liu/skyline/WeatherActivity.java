@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -12,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.telecom.Call;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +42,7 @@ public class WeatherActivity extends AppCompatActivity{
     public SwipeRefreshLayout swipeRefresh;
     private String mWeatherId;
     private ScrollView weatherLayout;
+    private Button addCity;
 
     private TextView titleCity;
     private TextView updateTime;
@@ -117,6 +122,7 @@ public class WeatherActivity extends AppCompatActivity{
         uvText=(TextView)findViewById(R.id.uv_text);
         swipeRefresh=(SwipeRefreshLayout)findViewById(R.id.swipe_refresh);
         swipeRefresh.setColorSchemeColors(R.color.colorPrimary);
+        addCity=(Button)findViewById(R.id.add_city);
         SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
         final String weatherString=prefs.getString("weather",null);
         String bingPic=prefs.getString("bing_pic",null);
@@ -126,7 +132,14 @@ public class WeatherActivity extends AppCompatActivity{
         else {
             loadBingPic();
         }
-        if (weatherString!=null){
+        if (MyCityFragment.cityList.size()>0){
+            //数据库表里有数据时直接访问
+            String weatheridd=MyCityFragment.cityList.get(0).getCountyId();
+            Log.d("WeatherActivity",weatheridd);
+            weatherLayout.setVisibility(View.INVISIBLE);
+            requestWeather(weatheridd);
+        }
+        else if (weatherString!=null){
             //有缓存时直接解析天气数据
             Weather weather= Utility.handleWeatherResponse(weatherString);
             mWeatherId=weather.basic.weatherId;
@@ -138,6 +151,15 @@ public class WeatherActivity extends AppCompatActivity{
             weatherLayout.setVisibility(View.INVISIBLE);
             requestWeather(mWeatherId);
         }
+        addCity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager=getSupportFragmentManager();
+                FragmentTransaction transaction=fragmentManager.beginTransaction();
+                transaction.replace(R.id.add_layout,new ChooseAreaFragment());
+                transaction.commit();
+            }
+        });
         navButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

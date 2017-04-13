@@ -20,14 +20,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         List<MyCity> myCities= DataSupport.findAll(MyCity.class);
-        Integer size=myCities.size();
-        Log.d("MainActivity",size.toString());
-        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
+        MyCityFragment.cityList.addAll(myCities);
         if (myCities.size()>0){
             Intent intent=new Intent(this,WeatherActivity.class);
             startActivity(intent);
             finish();
         }
+//        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
 //        if (prefs.getString("weather",null)!=null){
 //            Intent intent=new Intent(this,WeatherActivity.class);
 //            startActivity(intent);

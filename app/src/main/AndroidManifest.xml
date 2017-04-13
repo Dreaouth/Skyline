@@ -21,7 +21,6 @@
         <activity android:name=".WeatherActivity" />
         <activity android:name=".nowActivity" />
         <activity android:name=".SuggestionActivity" />
-        <activity android:name=".insert_city"></activity>
     </application>
 
 </manifest>

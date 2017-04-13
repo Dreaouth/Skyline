@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.liu.skyline.db.City;
 import com.example.liu.skyline.db.County;
 import com.example.liu.skyline.db.Province;
+import com.example.liu.skyline.gson.AQI;
 import com.example.liu.skyline.gson.Weather;
 import com.example.liu.skyline.util.HttpUtil;
 import com.example.liu.skyline.util.Utility;
@@ -116,15 +117,18 @@ public class ChooseAreaFragment extends Fragment {
                         myCity.save();
                         Toast.makeText(getContext(),countyList.get(position).getCountyName(),Toast.LENGTH_SHORT).show();
                         MyCityFragment.cityList.add(myCity);
+                        Toast.makeText(getContext(),"添加成功",Toast.LENGTH_SHORT).show();
+                        WeatherActivity activity=(WeatherActivity)getActivity();
+                        activity.swipeRefresh.setRefreshing(true);
+                        activity.requestWeather(countyList.get(position).getWeatherId());
+                        onDestroy();
 //                        MyCityFragment.MyCityAdapter adapter=(MyCityFragment.MyCityAdapter)mycity_listview.getAdapter();
 //                        adapter.notifyDataSetChanged();
 //                        activity.drawerLayout.closeDrawers();
 //                        activity.swipeRefresh.setRefreshing(true);
 //                        activity.requestWeather(WeatherId);
-//                        Toast.makeText(getContext(),"刷新成功",Toast.LENGTH_SHORT).show();
 //                        activity.finish();
                     }
-
                 }
             }
         });
@@ -141,6 +145,12 @@ public class ChooseAreaFragment extends Fragment {
         });
         queryProvince();
     }
+
+    @Override
+    public void onDestroyView() {
+
+    }
+
     /**
      * 改进方法查询，通过搜索框的方式直接搜索城市
      */

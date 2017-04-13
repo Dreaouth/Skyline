@@ -15,7 +15,10 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+
+import org.litepal.crud.DataSupport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,14 +30,12 @@ import java.util.List;
 public class MyCityFragment extends Fragment {
     public static List<MyCity> cityList=new ArrayList<>();
     private ListView listView;
-    private Button button;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.my_city,container,false);
         MyCityAdapter adapter=new MyCityAdapter(this.getActivity(),cityList);
         listView=(ListView)view.findViewById(R.id.listView_MyCity);
-        button=(Button)view.findViewById(R.id.insert_city);
         listView.setAdapter(adapter);
         return view;
     }
@@ -71,16 +72,6 @@ public class MyCityFragment extends Fragment {
                 //若返回true，则只调用onItemLongClick
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),insert_city.class);
-                startActivity(intent);
-                button.setVisibility(View.INVISIBLE);
-                WeatherActivity activity=(WeatherActivity)getActivity();
-                activity.drawerLayout.closeDrawers();
-            }
-        });
     }
 
     public class MyCityAdapter extends BaseAdapter {
@@ -113,6 +104,8 @@ public class MyCityFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     myCities.remove(position);
+                    DataSupport.deleteAll(MyCity.class,"countyId = ?",cityList.get(position).getCountyId());
+                    Toast.makeText(getContext(),"删除成功",Toast.LENGTH_SHORT).show();
                     notifyDataSetChanged();
                 }
             });

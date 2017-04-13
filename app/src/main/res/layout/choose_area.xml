@@ -36,7 +36,8 @@
             android:iconifiedByDefault="false"
             android:queryHint="请输入搜索的城市名称"
             android:queryBackground="@drawable/search"
-            android:background="@drawable/search" />
+            android:background="@drawable/search"
+            android:visibility="gone"/>
         <ListView
             android:id="@+id/list_view"
             android:layout_width="match_parent"

@@ -43,4 +43,10 @@
             android:layout_height="match_parent"
             android:layout_gravity="start" />
     </android.support.v4.widget.DrawerLayout>
+    <FrameLayout
+        android:id="@+id/add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
 </FrameLayout>
