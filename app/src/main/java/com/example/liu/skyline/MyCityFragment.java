@@ -103,8 +103,8 @@ public class MyCityFragment extends Fragment {
             holder.delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    DataSupport.deleteAll(MyCity.class,"countyId = ?",myCities.get(position).getCountyId());
                     myCities.remove(position);
-                    DataSupport.deleteAll(MyCity.class,"countyId = ?",cityList.get(position).getCountyId());
                     Toast.makeText(getContext(),"删除成功",Toast.LENGTH_SHORT).show();
                     notifyDataSetChanged();
                 }
