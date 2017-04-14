@@ -115,13 +115,14 @@ public class ChooseAreaFragment extends Fragment {
 //                        WeatherActivity activity=(WeatherActivity)getActivity();
                         MyCity myCity=new MyCity(countyList.get(position).getCountyName(),R.id.city_delete,WeatherId);
                         myCity.save();
-                        Toast.makeText(getContext(),countyList.get(position).getCountyName(),Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getContext(),countyList.get(position).getCountyName(),Toast.LENGTH_SHORT).show();
                         MyCityFragment.cityList.add(myCity);
                         Toast.makeText(getContext(),"添加成功",Toast.LENGTH_SHORT).show();
+                        getFragmentManager().popBackStack();
                         WeatherActivity activity=(WeatherActivity)getActivity();
                         activity.swipeRefresh.setRefreshing(true);
                         activity.requestWeather(countyList.get(position).getWeatherId());
-                        onDestroy();
+
 //                        MyCityFragment.MyCityAdapter adapter=(MyCityFragment.MyCityAdapter)mycity_listview.getAdapter();
 //                        adapter.notifyDataSetChanged();
 //                        activity.drawerLayout.closeDrawers();
@@ -147,8 +148,8 @@ public class ChooseAreaFragment extends Fragment {
     }
 
     @Override
-    public void onDestroyView() {
-
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     /**

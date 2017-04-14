@@ -157,6 +157,8 @@ public class WeatherActivity extends AppCompatActivity{
                 FragmentManager fragmentManager=getSupportFragmentManager();
                 FragmentTransaction transaction=fragmentManager.beginTransaction();
                 transaction.replace(R.id.add_layout,new ChooseAreaFragment());
+                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
