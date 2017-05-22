@@ -18,19 +18,24 @@ tags:
 
 打开软件的首页面如下  
 
-![](http://i.imgur.com/KZBXLV5.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](http://i.imgur.com/UQIjk1v.png)
+![](http://i.imgur.com/KZBXLV5.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](http://i.imgur.com/UQIjk1v.png)  
+
 点击天气详情按钮，会跳到一个显示详细内容的页面  
 
-![](http://i.imgur.com/44AaCer.png)
+![](http://i.imgur.com/44AaCer.png)  
+
 点击加号按钮，会进行到添加城市的页面  
 
-![](http://i.imgur.com/S9bkiPo.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](http://i.imgur.com/9IurY9v.png)
+![](http://i.imgur.com/S9bkiPo.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](http://i.imgur.com/9IurY9v.png)  
+
 在首页左划0或者点击向左的按钮，会弹出选择城市的菜单栏  
 
-![](http://i.imgur.com/YJeQC0E.png)
+![](http://i.imgur.com/YJeQC0E.png)  
+
 点击相应城市，就会切换到该城市，长按城市按钮，会弹出删除城市的选项，点击删除，该城市就从列表中删除  
 
-![](http://i.imgur.com/ufKbtW7.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](http://i.imgur.com/DoHVcgE.png)  
+![](http://i.imgur.com/ufKbtW7.png)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](http://i.imgur.com/DoHVcgE.png)  
+
 
 ## 一、数据获取
 
