@@ -188,7 +188,7 @@ public class WeatherActivity extends AppCompatActivity{
                 Weather weather=Utility.handleWeatherResponse(weatherString);
                 Intent intent=new Intent(WeatherActivity.this,SuggestionActivity.class);
                 intent.putExtra("title","空气状况");
-                intent.putExtra("status",weather.suggestion.air.status);
+//                intent.putExtra("status",weather.suggestion.air.status);
                 intent.putExtra("information",weather.suggestion.air.info);
                 startActivity(intent);
             }
@@ -353,7 +353,7 @@ public class WeatherActivity extends AppCompatActivity{
                 no2Text.setText(weather.aqi.city.no2);
             }
             if (weather.suggestion!=null){
-                airText.setText(weather.suggestion.air.status);
+     //           airText.setText(weather.suggestion.air.status);
                 comfText.setText(weather.suggestion.comf.status);
                 washText.setText(weather.suggestion.cw.status);
                 drsgText.setText(weather.suggestion.drsg.status);
