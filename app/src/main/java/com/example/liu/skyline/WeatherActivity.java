@@ -59,10 +59,6 @@ public class WeatherActivity extends AppCompatActivity{
     private TextView so2Text;
     private TextView noText;
     private TextView no2Text;
-    private LinearLayout airButton;
-    private TextView airText;
-    private LinearLayout comfButton;
-    private TextView comfText;
     private LinearLayout washButton;
     private TextView washText;
     private LinearLayout drsgButton;
@@ -105,10 +101,6 @@ public class WeatherActivity extends AppCompatActivity{
         so2Text=(TextView)findViewById(R.id.so2_text);
         noText=(TextView)findViewById(R.id.o3_text);
         no2Text=(TextView)findViewById(R.id.no2_text);
-        airButton=(LinearLayout)findViewById(R.id.air_button);
-        airText=(TextView)findViewById(R.id.air_text);
-        comfButton=(LinearLayout)findViewById(R.id.comf_button);
-        comfText=(TextView)findViewById(R.id.comf_text);
         washButton=(LinearLayout)findViewById(R.id.wash_button);
         washText=(TextView)findViewById(R.id.wash_text);
         drsgButton=(LinearLayout)findViewById(R.id.drsg_button);
@@ -180,28 +172,6 @@ public class WeatherActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent now_information_intent=new Intent(WeatherActivity.this,nowActivity.class);
                 startActivity(now_information_intent);
-            }
-        });
-        airButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Weather weather=Utility.handleWeatherResponse(weatherString);
-                Intent intent=new Intent(WeatherActivity.this,SuggestionActivity.class);
-                intent.putExtra("title","空气状况");
-//                intent.putExtra("status",weather.suggestion.air.status);
-                intent.putExtra("information",weather.suggestion.air.info);
-                startActivity(intent);
-            }
-        });
-        comfButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Weather weather=Utility.handleWeatherResponse(weatherString);
-                Intent intent=new Intent(WeatherActivity.this,SuggestionActivity.class);
-                intent.putExtra("title","舒适状况");
-                intent.putExtra("status",weather.suggestion.comf.status);
-                intent.putExtra("information",weather.suggestion.comf.info);
-                startActivity(intent);
             }
         });
         washButton.setOnClickListener(new View.OnClickListener() {
@@ -353,8 +323,6 @@ public class WeatherActivity extends AppCompatActivity{
                 no2Text.setText(weather.aqi.city.no2);
             }
             if (weather.suggestion!=null){
-     //           airText.setText(weather.suggestion.air.status);
-                comfText.setText(weather.suggestion.comf.status);
                 washText.setText(weather.suggestion.cw.status);
                 drsgText.setText(weather.suggestion.drsg.status);
                 fluText.setText(weather.suggestion.flu.status);
